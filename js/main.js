@@ -21,11 +21,19 @@
         }
     }
 
-    const list = document.querySelectorAll(".emoji-list li");
-    for (var item of list) item.tabIndex = 0;
+    function handleDblClick(event) {
+        if (event.target.nodeName === "LI") {
+            let url = `https://www.google.com/search?q=${event.target.textContent}`;
+            window.open(url, "_blank");
+        }
+    }
+
+    // const list = document.querySelectorAll(".emoji-list li");
+    // for (var item of list) item.tabIndex = 0;
 
 
     let emojiList = document.querySelector(".emoji-list");
     emojiList.addEventListener("click", handleClick);
+    emojiList.addEventListener("dblclick", handleDblClick);
 
 }());

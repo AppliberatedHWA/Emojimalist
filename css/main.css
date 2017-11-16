@@ -1,3 +1,7 @@
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
 body {
     background-color: #fff;
     color: #212529;
@@ -29,23 +33,26 @@ h1 {
     margin: 0;
     padding: 0;
     user-select: none;
+    outline: none;
 }
 
 .emoji-list li {
     align-items: center;
     border-bottom: 1px solid #e2e2e2;
     display: flex;
-    padding: 1rem 1rem 1rem 0;
+    padding-right: 1rem;
     outline: none;
     transition: background-color 0.2s ease;
 }
 
-.emoji-list li:focus {
+.emoji-list li:hover {
     background-color: #e2e2e2;
 }
 
 .emoji-list i {
+    cursor: pointer;
     min-width: 4em;
+    padding: 1rem 0;
     text-align: center;
 }
 
@@ -73,11 +80,11 @@ h1 {
         opacity: 0;
     }
 
-    33% {
+    20% {
         opacity: 1;
     }
 
-    66% {
+    80% {
         opacity: 1;
     }
 
