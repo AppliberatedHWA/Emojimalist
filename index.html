@@ -6,9 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Emojimalist</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />    
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+
+    <header>
+        <h1>A minimalist Emoji list.</h1>
+        <p><b>Tap (click)</b> the emoji to copy it to the clipboard. <b>Long tap (right-click)</b> the emoji or the description to do a web search.</p>
+    </header>
+
     <div class="container">
         <ul class="emoji-list" tabindex="0">
             <li><i>😀</i>grinning face</li>
@@ -2636,6 +2643,11 @@
             <li><i>🏴󠁧󠁢󠁷󠁬󠁳󠁿</i>⊛ Wales</li>
         </ul>
     </div>
+
+    <input type="text" id="copied-emoji" readonly>
+
+    <p id="snackbar"></p>
+
     <script src="/js/main.js"></script>
 </body>
 </html>

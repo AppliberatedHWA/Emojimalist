@@ -1,17 +1,27 @@
 body {
+    background-color: #fff;
+    color: #212529;
     font-family: sans-serif;
     font-size: 1rem;
-    margin: 0;
 }
 
 i {
-    font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;    
+    font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", Times, Symbola, Aegyptus, Code2000, Code2001, Code2002, Musica, serif, LastResort;
     font-size: 2rem;
     font-style: normal;
 }
 
 .container {
     /* margin: 0 2rem; */
+}
+
+header {
+    margin: 0 2rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
 }
 
 .emoji-list {
@@ -23,20 +33,15 @@ i {
 
 .emoji-list li {
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e2e2e2;
     display: flex;
     padding: 1rem 1rem 1rem 0;
     outline: none;
+    transition: background-color 0.2s ease;
 }
 
-/* .emoji-list li:hover {
-    background: #000;
-    color: #fff;
-} */
-
 .emoji-list li:focus {
-    background: #ff9800;
-    /* color: #fff; */
+    background-color: #e2e2e2;
 }
 
 .emoji-list i {
@@ -44,4 +49,39 @@ i {
     text-align: center;
 }
 
+#snackbar {
+    background-color: #323232;
+    bottom: 0;
+    color: white;
+    left: 0;
+    line-height: 3rem;
+    margin: 0;
+    opacity: 0;
+    padding: 0 1.5rem;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+}
 
+.show {
+    animation: 5s ease show-hide;
+}
+
+@keyframes show-hide {
+    0% {
+        opacity: 0;
+    }
+
+    33% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
